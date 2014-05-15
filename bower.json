@@ -1,0 +1,27 @@
+{
+  "name": "hint",
+  "description": "Awesome tooltips at your fingertips",
+  "version": "1.0.0",
+  "homepage": "https://github.com/bevacqua/hint",
+  "author": {
+    "name": "Nicolas Bevacqua",
+    "email": "ng@bevacqua.io",
+    "url": "http://bevacqua.io"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bevacqua/hint.git"
+  },
+  "main": "dist/hint.js",
+  "ignore": [
+    ".*",
+    "package.json",
+    "node_modules",
+    "resources",
+    "src",
+    "test",
+    "gulpfile.js"
+  ],
+  "dependencies": {}
+}

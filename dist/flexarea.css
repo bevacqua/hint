@@ -1,0 +1,31 @@
+/**
+ * flexarea - Pretty flexible textareas
+ * @version v1.0.26
+ * @link https://github.com/bevacqua/flexarea
+ * @license MIT
+ */
+.fa-grip,
+.fa-grip:before,
+.fa-grip:after {
+  background-color: #f3f4eb;
+  border-color: #dedede;
+  border-style: solid;
+  border-width: 0pt 1px 1px;
+  cursor: s-resize;
+  overflow: hidden;
+}
+.fa-grip {
+  height: 9px;
+}
+.fa-grip:before,
+.fa-grip:after {
+  height: 3px;
+  display: block;
+  content: '';
+}
+.fa-textarea {
+  resize: none;
+}
+.fa-textarea-resizing {
+  opacity: 0.75;
+}
