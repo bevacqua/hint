@@ -1,6 +1,6 @@
 /**
  * hint - Awesome tooltips at your fingertips
- * @version v1.0.1
+ * @version v1.0.2
  * @link https://github.com/bevacqua/hint
  * @license MIT
  */
@@ -8,15 +8,20 @@
 [data-hint-before] {
   position: relative;
 }
+[data-hint]:after {
+  content: attr(data-hint);
+}
+[data-hint-before]:before {
+  content: attr(data-hint-before);
+}
 [data-hint]:after,
 [data-hint-before]:before {
   position: absolute;
   top: 16px;
   left: 6px;
-  z-index: z-hint;
+  z-index: 5000;
   pointer-events: none;
-  content: attr(data-hint);
-  box-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   padding: 8px 10px;
   line-height: 12px;
   white-space: nowrap;
@@ -34,7 +39,7 @@
 }
 [data-hint]:hover:after,
 [data-hint-before]:hover:before {
-  box-transform: translateY(8px);
+  transform: translateY(8px);
 }
 @media only screen and (max-width: 767px) {
   [data-hint]:after,
