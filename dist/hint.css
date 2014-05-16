@@ -1,0 +1,64 @@
+/**
+ * hint - Awesome tooltips at your fingertips
+ * @version v1.0.1
+ * @link https://github.com/bevacqua/hint
+ * @license MIT
+ */
+[data-hint],
+[data-hint-before] {
+  position: relative;
+}
+[data-hint]:after,
+[data-hint-before]:before {
+  position: absolute;
+  top: 16px;
+  left: 6px;
+  z-index: z-hint;
+  pointer-events: none;
+  content: attr(data-hint);
+  box-transition: all 0.3s ease;
+  padding: 8px 10px;
+  line-height: 12px;
+  white-space: nowrap;
+  text-decoration: none;
+  text-indent: 0;
+  overflow: visible;
+  font-size: 12px;
+  font-weight: normal;
+  color: #fff;
+  text-shadow: 1px 0px 1px #888;
+  background-color: #412917;
+  border-left: 6px solid #d37092;
+  box-shadow: 1px 2px 6px rgba(0,0,0,0.3);
+  box-radius: 2px;
+}
+[data-hint]:hover:after,
+[data-hint-before]:hover:before {
+  box-transform: translateY(8px);
+}
+@media only screen and (max-width: 767px) {
+  [data-hint]:after,
+  [data-hint-before]:before {
+    display: none;
+  }
+  [data-hint]:hover:after,
+  [data-hint-before]:hover:before {
+    display: block;
+  }
+}
+@media only screen and (min-width: 768px) {
+  [data-hint]:after,
+  [data-hint-before]:before {
+    opacity: 0;
+  }
+  [data-hint]:hover:after,
+  [data-hint-before]:hover:before {
+    opacity: 1;
+  }
+}
+@media print {
+  [data-hint],
+  [data-hint-before] {
+    display: none;
+  }
+}
