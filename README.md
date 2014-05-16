@@ -20,7 +20,7 @@ npm install -S hint
 
 Just give your elements a nice tooltip in HTML. When hovered, the hint will appear.
 
-```js
+```html
 <span data-hint='foobar'>Foo Bar</span>
 ```
 
