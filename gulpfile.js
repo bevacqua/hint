@@ -6,12 +6,8 @@ var git = require('gulp-git');
 var clean = require('gulp-clean');
 var rename = require('gulp-rename');
 var header = require('gulp-header');
-var uglify = require('gulp-uglify');
 var stylus = require('gulp-stylus');
 var minifyCSS = require('gulp-minify-css');
-var browserify = require('browserify');
-var streamify = require('gulp-streamify');
-var source = require('vinyl-source-stream');
 var size = require('gulp-size');
 
 var extended = [
@@ -24,16 +20,14 @@ var extended = [
   ''
 ].join('\n');
 
-var succint = ' <%= pkg.name %>@v<%= pkg.version %>, <%= pkg.license %> licensed. <%= pkg.homepage %>';
-var succjs = '//' + succint + '\n';
-var succss = '/*' + succint + ' */\n';
+var succint = '/* <%= pkg.name %>@v<%= pkg.version %>, <%= pkg.license %> licensed. <%= pkg.homepage %> */\n';
 
 gulp.task('clean', function () {
   gulp.src('./dist', { read: false })
     .pipe(clean());
 });
 
-gulp.task('build-css', ['clean', 'bump'], function () {
+gulp.task('build', ['clean', 'bump'], function () {
   var pkg = require('./package.json');
 
   return gulp.src('./src/hint.styl')
@@ -42,22 +36,8 @@ gulp.task('build-css', ['clean', 'bump'], function () {
     .pipe(gulp.dest('./dist'))
     .pipe(rename('hint.min.css'))
     .pipe(minifyCSS())
-    .pipe(header(succss, { pkg : pkg } ))
-    .pipe(gulp.dest('./dist'));
-});
-
-gulp.task('build', ['build-css'], function () {
-  var pkg = require('./package.json');
-
-  return browserify('./src/hint.js')
-    .bundle({ debug: true, standalone: 'hint' })
-    .pipe(source('hint.js'))
-    .pipe(streamify(header(extended, { pkg : pkg } )))
-    .pipe(gulp.dest('./dist'))
-    .pipe(streamify(rename('hint.min.js')))
-    .pipe(streamify(uglify()))
-    .pipe(streamify(header(succjs, { pkg : pkg } )))
-    .pipe(streamify(size()))
+    .pipe(size())
+    .pipe(header(succint, { pkg : pkg } ))
     .pipe(gulp.dest('./dist'));
 });
 

@@ -18,11 +18,22 @@ npm install -S hint
 
 # Usage
 
-Just call `hint` on your `[data-hint]` objects.
+Just call `hint.all` on an HTML DOM node. It'll find any nodes with a `data-hint` attribute and work its magic!
 
 ```js
-var elem = document.querySelector('[data-hint]');
+hint.all(document.body);
+```
+
+You can also do it on just one element.
+
+```js
 hint(elem);
+```
+
+Turn them off using `hint.off`.
+
+```js
+hint.off(elem);
 ```
 
 You'll get a nice little tooltip. Remember to include the CSS in your styles!

@@ -1,0 +1,45 @@
+@import 'tooltip'
+
+[data-hint],
+[data-hint-before]
+  position relative
+
+[data-hint]:after,
+[data-hint-before]:before
+  position absolute
+  top 16px
+  left 6px
+
+  z-index z-hint
+  pointer-events none
+  content attr(data-hint)
+  box-transition all 0.3s ease
+
+  tooltip()
+
+[data-hint]:hover:after,
+[data-hint-before]:hover:before
+  box-transform translateY(8px)
+
+@media only screen and (max-width: 767px)
+  [data-hint]:after,
+  [data-hint-before]:before
+    display none
+
+  [data-hint]:hover:after,
+  [data-hint-before]:hover:before
+    display block
+
+@media only screen and (min-width: 768px)
+  [data-hint]:after,
+  [data-hint-before]:before
+    opacity 0
+
+  [data-hint]:hover:after,
+  [data-hint-before]:hover:before
+    opacity 1
+
+@media print
+  [data-hint],
+  [data-hint-before]
+    display none

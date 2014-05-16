@@ -13,7 +13,6 @@
     "type": "git",
     "url": "git://github.com/bevacqua/hint.git"
   },
-  "main": "dist/hint.js",
   "ignore": [
     ".*",
     "package.json",
