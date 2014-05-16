@@ -1,3 +1,3 @@
-# v1.0.0 Take a Hint
+# v1.0.2 Take a Hint
 
 - Initial Public Release
