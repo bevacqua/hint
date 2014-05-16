@@ -18,32 +18,20 @@ npm install -S hint
 
 # Usage
 
-Just call `hint.all` on an HTML DOM node. It'll find any nodes with a `data-hint` attribute and work its magic!
+Just give your elements a nice tooltip in HTML. When hovered, the hint will appear.
 
 ```js
-hint.all(document.body);
-```
-
-You can also do it on just one element.
-
-```js
-hint(elem);
-```
-
-Turn them off using `hint.off`.
-
-```js
-hint.off(elem);
+<span data-hint='foobar'>Foo Bar</span>
 ```
 
 You'll get a nice little tooltip. Remember to include the CSS in your styles!
 
 ![hint.png][1]
 
-If you want to make the tooltip right-aligned, use the `ht-hint-right` class instead.
+If you want to use the `:before` pseudo-selector, use the `[data-hint-before]` class instead.
 
 # License
 
 MIT
 
-  [1]: http://i.imgur.com/ZWpAHu1.png
+  [1]: http://i.imgur.com/EFP5j4E.png

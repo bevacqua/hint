@@ -1,8 +1,16 @@
 @import 'tooltip'
 
+z-hint = 5000
+
 [data-hint],
 [data-hint-before]
   position relative
+
+[data-hint]:after
+  content attr(data-hint)
+
+[data-hint-before]:before
+  content attr(data-hint-before)
 
 [data-hint]:after,
 [data-hint-before]:before
@@ -12,14 +20,13 @@
 
   z-index z-hint
   pointer-events none
-  content attr(data-hint)
-  box-transition all 0.3s ease
+  transition all 0.3s ease
 
   tooltip()
 
 [data-hint]:hover:after,
 [data-hint-before]:hover:before
-  box-transform translateY(8px)
+  transform translateY(8px)
 
 @media only screen and (max-width: 767px)
   [data-hint]:after,
