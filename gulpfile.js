@@ -31,7 +31,9 @@ gulp.task('build', ['clean', 'bump'], function () {
   var pkg = require('./package.json');
 
   return gulp.src('./src/hint.styl')
-    .pipe(stylus())
+    .pipe(stylus({
+      include: 'node_modules'
+    }))
     .pipe(header(extended, { pkg : pkg } ))
     .pipe(gulp.dest('./dist'))
     .pipe(rename('hint.min.css'))
