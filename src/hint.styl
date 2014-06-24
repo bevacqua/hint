@@ -2,18 +2,15 @@
 
 z-hint = 5000
 
+[aria-label],
 [data-hint],
 [data-hint-before]
   position relative
 
-[data-hint]:after
-  content attr(data-hint)
-
-[data-hint-before]:before
-  content attr(data-hint-before)
-
+[aria-label]:after,
 [data-hint]:after,
 [data-hint-before]:before
+  display none
   position absolute
   top 16px
   left 6px
@@ -24,29 +21,35 @@ z-hint = 5000
 
   tooltip()
 
+[aria-label]:hover:after,
 [data-hint]:hover:after,
 [data-hint-before]:hover:before
   transform translateY(8px)
+  display block
 
-@media only screen and (max-width: 767px)
-  [data-hint]:after,
-  [data-hint-before]:before
-    display none
+[aria-label]:after
+  content attr(aria-label)
 
-  [data-hint]:hover:after,
-  [data-hint-before]:hover:before
-    display block
+[data-hint]:after
+  content attr(data-hint)
+
+[data-hint-before]:before
+  content attr(data-hint-before)
 
 @media only screen and (min-width: 768px)
+  [aria-label]:after,
   [data-hint]:after,
   [data-hint-before]:before
+    display block
     opacity 0
 
+  [aria-label]:hover:after,
   [data-hint]:hover:after,
   [data-hint-before]:hover:before
     opacity 1
 
-@media print
-  [data-hint],
-  [data-hint-before]
+@media only print
+  [aria-label]:after,
+  [data-hint]:after,
+  [data-hint-before]:before
     display none
