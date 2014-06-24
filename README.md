@@ -28,7 +28,19 @@ You'll get a nice little tooltip. Remember to include the CSS in your styles!
 
 ![hint.png][1]
 
-If you want to use the `:before` pseudo-selector, use the `data-hint-before` attribute instead. The hint has a `z-index` of `5000`.
+By default, the `:after` pseudo-selector is used. This means you can use the `:before` pseudo-selector for your own purposes. If you need to switch things up, use the `data-hint-before` attribute instead.
+
+```html
+<span data-hint-before='foobar'>Foo Bar</span>
+```
+
+You can also use the [`aria-label`][2] attribute.
+
+```html
+<span aria-label='foobar'>Foo Bar</span>
+```
+
+Hints have a `z-index` of `5000`.
 
 # License
 
