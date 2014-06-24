@@ -1,3 +1,7 @@
+# v1.1.15 Nudity Is Bad
+
+- Include `nib` during stand-alone builds for cross-browser compatibility
+
 # v1.1.0 Accessible King
 
 - `aria-label` attributes also displayed as hints
