@@ -47,3 +47,4 @@ Hints have a `z-index` of `5000`.
 MIT
 
   [1]: http://i.imgur.com/EFP5j4E.png
+  [2]: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute
