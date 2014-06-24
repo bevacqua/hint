@@ -1,7 +1,7 @@
 {
   "name": "hint",
   "description": "Awesome tooltips at your fingertips",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "homepage": "https://github.com/bevacqua/hint",
   "author": {
     "name": "Nicolas Bevacqua",
