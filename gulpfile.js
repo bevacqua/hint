@@ -1,5 +1,6 @@
 'use strict';
 
+var path = require('path');
 var gulp = require('gulp');
 var bump = require('gulp-bump');
 var git = require('gulp-git');
@@ -32,7 +33,7 @@ gulp.task('build', ['clean', 'bump'], function () {
 
   return gulp.src('./src/hint.styl')
     .pipe(stylus({
-      include: 'node_modules'
+      import: path.resolve('node_modules/nib/index')
     }))
     .pipe(header(extended, { pkg : pkg } ))
     .pipe(gulp.dest('./dist'))
