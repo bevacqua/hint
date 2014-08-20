@@ -1,6 +1,6 @@
 /**
  * hint - Awesome tooltips at your fingertips
- * @version v1.1.15
+ * @version v1.2.0
  * @link https://github.com/bevacqua/hint
  * @license MIT
  */
@@ -14,7 +14,7 @@
 [data-hint-before]:before {
   display: none;
   position: absolute;
-  top: 16px;
+  top: 101%;
   left: 6px;
   z-index: 5000;
   pointer-events: none;
