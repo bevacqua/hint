@@ -1,3 +1,7 @@
+# v1.2.0 101 Dalmatians
+
+- Using `top: 101%` is better most of the time
+
 # v1.1.15 Nudity Is Bad
 
 - Include `nib` during stand-alone builds for cross-browser compatibility
