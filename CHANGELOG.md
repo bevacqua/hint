@@ -1,3 +1,7 @@
+# v1.2.1 Hot Pink
+
+- Changed prefix of color variables
+
 # v1.2.0 101 Dalmatians
 
 - Using `top: 101%` is better most of the time
