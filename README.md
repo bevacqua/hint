@@ -40,6 +40,8 @@ You can also use the [`aria-label`][2] attribute.
 <span aria-label='foobar'>Foo Bar</span>
 ```
 
+If you want the `aria-label` hint to use `:before`, then you must use the `hint-before` class on the element as well.
+
 Hints have a `z-index` of `5000`.
 
 # License

@@ -1,3 +1,7 @@
+# v1.2.2 Before Dawn
+
+- Introduce ability to add `:before` hints using `aria-label`
+
 # v1.2.1 Hot Pink
 
 - Changed prefix of color variables
