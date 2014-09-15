@@ -1,6 +1,6 @@
 /**
  * hint - Awesome tooltips at your fingertips
- * @version v1.3.0
+ * @version v1.3.1
  * @link https://github.com/bevacqua/hint
  * @license MIT
  */
@@ -19,11 +19,11 @@
   left: 6px;
   z-index: 5000;
   pointer-events: none;
-  -webkit-transition: all 0.3s ease 1s;
-  -moz-transition: all 0.3s ease 1s;
-  -o-transition: all 0.3s ease 1s;
-  -ms-transition: all 0.3s ease 1s;
-  transition: all 0.3s ease 1s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
   padding: 8px 10px;
   line-height: 12px;
   white-space: nowrap;
@@ -50,6 +50,11 @@
   -o-transform: translateY(8px);
   -ms-transform: translateY(8px);
   transform: translateY(8px);
+  -webkit-transition: all 0.3s ease 1s;
+  -moz-transition: all 0.3s ease 1s;
+  -o-transition: all 0.3s ease 1s;
+  -ms-transition: all 0.3s ease 1s;
+  transition: all 0.3s ease 1s;
   display: block;
 }
 [aria-label]:not(.hint-before):after,
