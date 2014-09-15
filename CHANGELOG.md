@@ -1,3 +1,7 @@
+# v1.3.1 Boring Panda
+
+- No delays on hide
+
 # v1.3.0 Obnoxious Boar
 
 - Introduced a `1s` delay before popping up hints

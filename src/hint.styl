@@ -18,7 +18,7 @@ z-hint = 5000
 
   z-index z-hint
   pointer-events none
-  transition all 0.3s ease 1s
+  transition all 0.3s ease 0s
 
   tooltip()
 
@@ -27,6 +27,7 @@ z-hint = 5000
 [data-hint]:hover:after,
 [data-hint-before]:hover:before
   transform translateY(8px)
+  transition all 0.3s ease 1s
   display block
 
 [aria-label]:not(.hint-before):after,
