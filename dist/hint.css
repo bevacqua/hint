@@ -1,6 +1,6 @@
 /**
  * hint - Awesome tooltips at your fingertips
- * @version v1.2.2
+ * @version v1.3.0
  * @link https://github.com/bevacqua/hint
  * @license MIT
  */
@@ -19,11 +19,11 @@
   left: 6px;
   z-index: 5000;
   pointer-events: none;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease 1s;
+  -moz-transition: all 0.3s ease 1s;
+  -o-transition: all 0.3s ease 1s;
+  -ms-transition: all 0.3s ease 1s;
+  transition: all 0.3s ease 1s;
   padding: 8px 10px;
   line-height: 12px;
   white-space: nowrap;

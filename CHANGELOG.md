@@ -1,3 +1,7 @@
+# v1.3.0 Obnoxious Boar
+
+- Introduced a `1s` delay before popping up hints
+
 # v1.2.2 Before Dawn
 
 - Introduce ability to add `:before` hints using `aria-label`
