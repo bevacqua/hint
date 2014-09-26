@@ -3,14 +3,13 @@
 z-hint = 5000
 
 [aria-label],
-[data-hint],
-[data-hint-before]
+[data-hint]
   position relative
 
 [aria-label]:not(.hint-before):after,
+[data-hint]:not(.hint-before):after,
 [aria-label].hint-before:before,
-[data-hint]:after,
-[data-hint-before]:before
+[data-hint].hint-before:before
   display none
   position absolute
   top 101%
@@ -18,45 +17,45 @@ z-hint = 5000
 
   z-index z-hint
   pointer-events none
-  transition all 0.3s ease 0s
+  transition opacity 0.3s ease 0s
 
   tooltip()
 
 [aria-label]:not(.hint-before):hover:after,
+[data-hint]:not(.hint-before):hover:after,
 [aria-label].hint-before:hover:before,
-[data-hint]:hover:after,
-[data-hint-before]:hover:before
+[data-hint].hint-before:hover:before
   transform translateY(8px)
-  transition all 0.3s ease 1s
+  transition opacity 0.3s ease 1s
   display block
 
 [aria-label]:not(.hint-before):after,
 [aria-label].hint-before:before
   content attr(aria-label)
 
-[data-hint]:after
+[data-hint]:not(.hint-before):after
   content attr(data-hint)
 
-[data-hint-before]:before
+[data-hint].hint-before:before
   content attr(data-hint-before)
 
 @media only screen and (min-width: 768px)
   [aria-label]:not(.hint-before):after,
+  [data-hint]:not(.hint-before):after,
   [aria-label].hint-before:before,
-  [data-hint]:after,
-  [data-hint-before]:before
+  [data-hint].hint-before:before
     display block
     opacity 0
 
   [aria-label]:not(.hint-before):hover:after,
+  [data-hint]:not(.hint-before):hover:after,
   [aria-label].hint-before:hover:before,
-  [data-hint]:hover:after,
-  [data-hint-before]:hover:before
+  [data-hint].hint-before:hover:before
     opacity 1
 
 @media only print
   [aria-label]:not(.hint-before):after,
+  [data-hint]:not(.hint-before):after,
   [aria-label].hint-before:before,
-  [data-hint]:after,
-  [data-hint-before]:before
+  [data-hint].hint-before:before
     display none

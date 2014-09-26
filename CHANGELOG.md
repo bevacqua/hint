@@ -1,3 +1,7 @@
+# v1.4.0 Boarding Pass
+
+- Remove `data-hint-before` in favor of reusing `data-hint` and the `hint-before` class
+
 # v1.3.1 Boring Panda
 
 - No delays on hide

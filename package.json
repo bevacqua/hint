@@ -26,6 +26,7 @@
     "gulp-stylus": "^1.0.0"
   },
   "dependencies": {
-    "nib": "^1.0.3"
+    "nib": "^1.0.3",
+    "insert-rule": "^2.0.0"
   }
 }
