@@ -50,11 +50,12 @@ Hints have a `z-index` of `5000`.
 
 # JavaScript
 
-The CSS will only get us so far, and we must add a tiny bit of JavaScript if we want a little functionality. This is not critical to `hint`, and is therefore considered an optional feature. The JavaScript codeenables the following features.
+The CSS will only get us so far, and we must add a tiny bit of JavaScript if we want a little functionality. This is not critical to `hint`, and is therefore considered an optional feature. The JavaScript code enables the following features.
 
-- Docking hints to the visible viewport so that hints aren't cut off when they're near the edge
-- If hints are even longer than the viewport itself, then the full viewport width will be used to render the hint in multi-line fashion
-- You can define a maximum hint width, so that your tips are easier to read
+- Hints are docked to the visible viewport so that they aren't cut off when they're near the edge
+- If hints are even wider than the viewport itself, then they are rendered in multi-line, setting the max width to the viewport width
+- You can define a maximum width to avoid hard-to-read long hints in wide viewports
+- When the JavaScript snippet is used, hints transition into view a second after the target element is hovered
 
 To include the JavaScript, just use the following snippet if you're using CommonJS, or refer to the `dist` directory for the compiled distributions.
 

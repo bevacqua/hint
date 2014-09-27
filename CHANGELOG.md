@@ -3,6 +3,7 @@
 - Remove `data-hint-before` in favor of reusing `data-hint` and the `hint-before` class
 - Remove `opacity` transitions in favor of `display: none` and `display: block`, fixing a content `overflow` bug
 - Introduced a JavaScript enhancement that allows hints to be constrained to the visible viewport
+- Moved `opacity` transition animation to JavaScript for better progressive enhancement
 
 # v1.3.1 Boring Panda
 

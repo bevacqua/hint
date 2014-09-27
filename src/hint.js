@@ -89,6 +89,26 @@ function move (elem) {
       left: totalWidth - right + margin + 'px'
     });
   }
+  transparent();
+  setTimeout(opaque, 1000);
+
+  function transparent () {
+    insertRule(selector, { opacity: 0 });
+  }
+  function opaque () {
+    insertRule(selector, transition({
+      opacity: 1
+    }));
+  }
+  function transition (css) {
+    var rule = 'transition';
+    var prefixes = ['', '-webkit-', '-moz-', '-o-', '-ms-'];
+    function add (prefix) {
+      css[prefix + rule] = 'opacity 0.3s ease-in-out';
+    }
+    prefixes.forEach(add);
+    return css;
+  }
 }
 
 function clear (elem) {
