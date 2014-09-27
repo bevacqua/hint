@@ -1,6 +1,6 @@
 # hint
 
-> Awesome tooltips at your fingertips
+> Awesome pure CSS tooltips at your fingertips
 
 # Install
 
@@ -47,6 +47,28 @@ If you want the `aria-label` hint to use `:before`, then you must use the `hint-
 ```
 
 Hints have a `z-index` of `5000`.
+
+# JavaScript
+
+The CSS will only get us so far, and we must add a tiny bit of JavaScript if we want a little functionality. This is not critical to `hint`, and is therefore considered an optional feature. The JavaScript codeenables the following features.
+
+- Docking hints to the visible viewport so that hints aren't cut off when they're near the edge
+- If hints are even longer than the viewport itself, then the full viewport width will be used to render the hint in multi-line fashion
+- You can define a maximum hint width, so that your tips are easier to read
+
+To include the JavaScript, just use the following snippet if you're using CommonJS, or refer to the `dist` directory for the compiled distributions.
+
+```js
+require('hint');
+```
+
+To set the maximum hint width, do:
+
+```js
+require('hint').maximumWidth = 650;
+```
+
+You can also set it to 'auto', which means the full viewport size will be used if the tooltip exceeds the viewport size in length. In practice, `'auto'` means `Infinity` will be used. The default `maximumWidth` value is `650` pixels wide.
 
 # License
 

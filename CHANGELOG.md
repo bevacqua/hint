@@ -1,6 +1,8 @@
 # v1.4.0 Boarding Pass
 
 - Remove `data-hint-before` in favor of reusing `data-hint` and the `hint-before` class
+- Remove `opacity` transitions in favor of `display: none` and `display: block`, fixing a content `overflow` bug
+- Introduced a JavaScript enhancement that allows hints to be constrained to the visible viewport
 
 # v1.3.1 Boring Panda
 

@@ -3,8 +3,9 @@
 var insertRule = require('insert-rule').context('hint');
 var events = require('./events');
 var expando = 'hint-' + Date.now();
-var timeout = 300; // same as transition delay
-var maxWidth = 650;
+var api = {
+  maximumWidth: 650
+};
 
 events.add(document.body, 'mouseover', enter);
 events.add(document.body, 'mouseout', leave);
@@ -61,6 +62,7 @@ function move (elem) {
     elem.setAttribute('id', id);
   }
 
+  var selector = '#' + id + pseudo;
   var rect = elem.getBoundingClientRect();
   var paddings = i(c.paddingLeft) + i(c.paddingRight) + i(c.marginLeft) + i(c.marginRight);
   var width;
@@ -69,36 +71,34 @@ function move (elem) {
   var collapse;
   var offset;
   var margin = 20;
+  var max = api.maximumWidth === 'auto' ? Infinity : api.maximumWidth;
 
   if (i(c.width) + margin > totalWidth) {
-    collapse = totalWidth - margin > maxWidth;
-    width = collapse ? maxWidth : totalWidth - margin;
-    offset = collapse ? totalWidth - maxWidth - margin : 0;
+    collapse = totalWidth - margin > max;
+    width = collapse ? max : totalWidth - margin;
+    offset = collapse ? totalWidth - max - margin : 0;
     left = -(rect.left + paddings) + offset;
 
-    insertRule('#' + id + pseudo, {
+    insertRule(selector, {
       width: width + 'px',
       left: left - 15 + 'px',
       whiteSpace: 'inherit'
     });
   } else if (right + margin > totalWidth) {
-    insertRule('#' + id + pseudo, {
+    insertRule(selector, {
       left: totalWidth - right + margin + 'px'
     });
   }
 }
 
-// TODO prevent overflow on X
-
 function clear (elem) {
-  setTimeout(clearStyles, timeout);
-
-  function clearStyles () {
-    var pseudo = getPseudo(elem);
-    var id = elem.id;
-    if (id.indexOf(expando) === 0) {
-      elem.removeAttribute('id');
-    }
-    insertRule.remove('#' + id + pseudo);
+  var pseudo = getPseudo(elem);
+  var id = elem.id;
+  if (id.indexOf(expando) === 0) {
+    elem.removeAttribute('id');
   }
+  var selector = '#' + id + pseudo;
+  insertRule.remove(selector);
 }
+
+module.exports = api;
