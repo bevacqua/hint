@@ -1,31 +1,25 @@
 /**
  * hint - Awesome tooltips at your fingertips
- * @version v1.3.1
+ * @version v1.4.0
  * @link https://github.com/bevacqua/hint
  * @license MIT
  */
 [aria-label],
-[data-hint],
-[data-hint-before] {
+[data-hint] {
   position: relative;
 }
 [aria-label]:not(.hint-before):after,
+[data-hint]:not(.hint-before):after,
 [aria-label].hint-before:before,
-[data-hint]:after,
-[data-hint-before]:before {
+[data-hint].hint-before:before {
   display: none;
   position: absolute;
   top: 101%;
   left: 6px;
   z-index: 5000;
   pointer-events: none;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  -ms-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
   padding: 8px 10px;
-  line-height: 12px;
+  line-height: 15px;
   white-space: nowrap;
   text-decoration: none;
   text-indent: 0;
@@ -42,55 +36,31 @@
   box-shadow: 1px 2px 6px rgba(0,0,0,0.3);
 }
 [aria-label]:not(.hint-before):hover:after,
+[data-hint]:not(.hint-before):hover:after,
 [aria-label].hint-before:hover:before,
-[data-hint]:hover:after,
-[data-hint-before]:hover:before {
+[data-hint].hint-before:hover:before {
+  display: block;
   -webkit-transform: translateY(8px);
   -moz-transform: translateY(8px);
   -o-transform: translateY(8px);
   -ms-transform: translateY(8px);
   transform: translateY(8px);
-  -webkit-transition: all 0.3s ease 1s;
-  -moz-transition: all 0.3s ease 1s;
-  -o-transition: all 0.3s ease 1s;
-  -ms-transition: all 0.3s ease 1s;
-  transition: all 0.3s ease 1s;
-  display: block;
 }
 [aria-label]:not(.hint-before):after,
 [aria-label].hint-before:before {
   content: attr(aria-label);
 }
-[data-hint]:after {
+[data-hint]:not(.hint-before):after {
   content: attr(data-hint);
 }
-[data-hint-before]:before {
+[data-hint].hint-before:before {
   content: attr(data-hint-before);
-}
-@media only screen and (min-width: 768px) {
-  [aria-label]:not(.hint-before):after,
-  [aria-label].hint-before:before,
-  [data-hint]:after,
-  [data-hint-before]:before {
-    display: block;
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-  }
-  [aria-label]:not(.hint-before):hover:after,
-  [aria-label].hint-before:hover:before,
-  [data-hint]:hover:after,
-  [data-hint-before]:hover:before {
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-  }
 }
 @media only print {
   [aria-label]:not(.hint-before):after,
+  [data-hint]:not(.hint-before):after,
   [aria-label].hint-before:before,
-  [data-hint]:after,
-  [data-hint-before]:before {
+  [data-hint].hint-before:before {
     display: none;
   }
 }
