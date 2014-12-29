@@ -1,3 +1,7 @@
+# v2.0.0 Change of Stylus
+
+- Changed Stylus variables `ht-brown` and `ht-pink` into `ht-background` and `ht-border` respectively
+
 # v1.5.0 Boarding Pass
 
 - Remove `data-hint-before` in favor of reusing `data-hint` and the `hint-before` class
