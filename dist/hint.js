@@ -1,6 +1,6 @@
 /**
  * @bevacqua/hint - Awesome tooltips at your fingertips
- * @version v3.0.2
+ * @version v3.0.3
  * @link https://github.com/bevacqua/hint
  * @license MIT
  */
