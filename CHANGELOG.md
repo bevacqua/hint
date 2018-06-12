@@ -1,3 +1,7 @@
+# v3.0.0 Change of Name
+
+- Renamed to `css-hint`
+
 # v2.0.0 Change of Stylus
 
 - Changed Stylus variables `ht-brown` and `ht-pink` into `ht-background` and `ht-border` respectively
