@@ -67,7 +67,7 @@ gulp.task('styles', ['clean', 'bump'], function () {
 gulp.task('bump', function () {
   var bumpType = process.env.BUMP || 'patch'; // major.minor.patch
 
-  return gulp.src(['./package.json', './bower.json'])
+  return gulp.src(['./package.json'])
     .pipe(bump({ type: bumpType }))
     .pipe(gulp.dest('./'));
 });
