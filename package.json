@@ -1,7 +1,7 @@
 {
   "name": "css-hint",
   "description": "Awesome tooltips at your fingertips",
-  "version": "2.0.0",
+  "version": "2.0.4",
   "homepage": "https://github.com/bevacqua/css-hint",
   "author": {
     "name": "Nicolas Bevacqua",
@@ -13,8 +13,9 @@
     "type": "git",
     "url": "git://github.com/bevacqua/css-hint.git"
   },
-  "main": "src/hint.js",
+  "main": "src/css-hint.js",
   "devDependencies": {
+    "browserify": "16.2.2",
     "gulp": "^3.6.2",
     "gulp-bump": "^0.1.8",
     "gulp-clean": "^0.2.4",
@@ -23,7 +24,10 @@
     "gulp-minify-css": "^0.3.4",
     "gulp-rename": "^1.2.0",
     "gulp-size": "^0.3.1",
-    "gulp-stylus": "^1.0.0"
+    "gulp-streamify": "1.0.2",
+    "gulp-stylus": "^1.0.0",
+    "gulp-uglify": "3.0.0",
+    "vinyl-source-stream": "2.0.0"
   },
   "dependencies": {
     "insert-rule": "^2.1.0",
