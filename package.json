@@ -1,8 +1,8 @@
 {
-  "name": "hint",
+  "name": "css-hint",
   "description": "Awesome tooltips at your fingertips",
   "version": "2.0.0",
-  "homepage": "https://github.com/bevacqua/hint",
+  "homepage": "https://github.com/bevacqua/css-hint",
   "author": {
     "name": "Nicolas Bevacqua",
     "email": "ng@bevacqua.io",
@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/bevacqua/hint.git"
+    "url": "git://github.com/bevacqua/css-hint.git"
   },
   "main": "src/hint.js",
   "devDependencies": {
