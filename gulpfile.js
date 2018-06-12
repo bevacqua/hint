@@ -36,12 +36,12 @@ gulp.task('clean', function () {
 gulp.task('build', ['styles'], function () {
   var pkg = require('./package.json');
 
-  return browserify('./src/css-hint.js', { debug: true, standalone: 'hint' })
+  return browserify('./src/hint.js', { debug: true, standalone: 'hint' })
     .bundle()
-    .pipe(source('css-hint.js'))
+    .pipe(source('hint.js'))
     .pipe(streamify(header(extended, { pkg : pkg } )))
     .pipe(gulp.dest('./dist'))
-    .pipe(streamify(rename('css-hint.min.js')))
+    .pipe(streamify(rename('hint.min.js')))
     .pipe(streamify(uglify()))
     .pipe(streamify(header(succjs, { pkg : pkg } )))
     .pipe(streamify(size()))
@@ -51,13 +51,13 @@ gulp.task('build', ['styles'], function () {
 gulp.task('styles', ['clean', 'bump'], function () {
   var pkg = require('./package.json');
 
-  return gulp.src('./src/css-hint.styl')
+  return gulp.src('./src/hint.styl')
     .pipe(stylus({
       import: path.resolve('node_modules/nib/index')
     }))
     .pipe(header(extended, { pkg : pkg } ))
     .pipe(gulp.dest('./dist'))
-    .pipe(rename('css-hint.min.css'))
+    .pipe(rename('hint.min.css'))
     .pipe(minifyCSS())
     .pipe(size())
     .pipe(header(succss, { pkg : pkg } ))

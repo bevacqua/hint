@@ -1,6 +1,6 @@
 # v3.0.0 Change of Name
 
-- Renamed to `css-hint`
+- Renamed to `@bevacqua/hint`
 
 # v2.0.0 Change of Stylus
 

@@ -1,19 +1,19 @@
 {
-  "name": "css-hint",
+  "name": "@bevacqua/hint",
   "description": "Awesome tooltips at your fingertips",
-  "version": "3.0.1",
-  "homepage": "https://github.com/bevacqua/css-hint",
+  "version": "3.0.2",
+  "homepage": "https://github.com/bevacqua/hint",
   "author": {
     "name": "Nicolas Bevacqua",
-    "email": "ng@bevacqua.io",
-    "url": "http://bevacqua.io"
+    "email": "hello@ponyfoo.com",
+    "url": "https://ponyfoo.com"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/bevacqua/css-hint.git"
+    "url": "git://github.com/bevacqua/hint.git"
   },
-  "main": "src/css-hint.js",
+  "main": "src/hint.js",
   "devDependencies": {
     "browserify": "16.2.2",
     "gulp": "^3.6.2",

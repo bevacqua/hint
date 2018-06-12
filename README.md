@@ -1,4 +1,4 @@
-# css-hint
+# @bevacqua/hint
 
 > Awesome pure CSS tooltips at your fingertips
 
@@ -7,13 +7,13 @@
 Using Bower
 
 ```shell
-bower install -S css-hint
+bower install -S @bevacqua/hint
 ```
 
 Using `npm`
 
 ```shell
-npm install -S css-hint
+npm install -S @bevacqua/hint
 ```
 
 # Usage
@@ -50,7 +50,7 @@ Hints have a `z-index` of `5000`.
 
 # JavaScript
 
-The CSS will only get us so far, and we must add a tiny bit of JavaScript if we want a little functionality. This is not critical to `css-hint`, and is therefore considered an optional feature. The JavaScript code enables the following features.
+The CSS will only get us so far, and we must add a tiny bit of JavaScript if we want a little functionality. This is not critical to `@bevacqua/hint`, and is therefore considered an optional feature. The JavaScript code enables the following features.
 
 - Hints are docked to the visible viewport so that they aren't cut off when they're near the edge
 - If hints are even wider than the viewport itself, then they are rendered in multi-line, setting the max width to the viewport width
@@ -60,13 +60,13 @@ The CSS will only get us so far, and we must add a tiny bit of JavaScript if we 
 To include the JavaScript, just use the following snippet if you're using CommonJS, or refer to the `dist` directory for the compiled distributions.
 
 ```js
-require('css-hint');
+require('@bevacqua/hint');
 ```
 
 To set the maximum hint width, do:
 
 ```js
-require('css-hint').maximumWidth = 650;
+require('@bevacqua/hint').maximumWidth = 650;
 ```
 
 You can also set it to 'auto', which means the full viewport size will be used if the tooltip exceeds the viewport size in length. In practice, `'auto'` means `Infinity` will be used. The default `maximumWidth` value is `650` pixels wide.
