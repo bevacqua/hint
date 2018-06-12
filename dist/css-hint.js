@@ -1,6 +1,6 @@
 /**
  * css-hint - Awesome tooltips at your fingertips
- * @version v2.0.4
+ * @version v2.0.5
  * @link https://github.com/bevacqua/css-hint
  * @license MIT
  */
